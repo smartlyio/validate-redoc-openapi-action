@@ -1,23 +1,19 @@
-# Hello world docker action
+# validate-redoc-openapi-action
 
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+This action validates that openapi file can be rendered with redoc
 
 ## Inputs
 
-### `who-to-greet`
+### `openapi-file`
 
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
+**Required** Location of the openapi file to validate. Default `openapi/openapi.yml`.
 
 The time we greeted you.
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
+uses: smartlyio/validate-redoc-openapi-action@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  openapi-file: 'dist/openapi.yml'
 ```
