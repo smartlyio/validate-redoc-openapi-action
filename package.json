@@ -10,8 +10,5 @@
   "dependencies": {
     "redoc": "^2.0.0-rc.30",
     "redoc-cli": "^0.9.8"
-  },
-  "scripts": {
-    "validate": "npm run build && redoc-cli bundle tmp/index.yaml --output static/index.html  --options.showExtensions=true"
   }
 }
