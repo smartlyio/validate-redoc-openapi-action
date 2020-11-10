@@ -1,7 +1,8 @@
-FROM node:12.19.0-stretch-slim as package
+FROM node:12-alpine
 
-COPY package.json yarn.lock entrypoint.sh /
+ENV REDOC_CLI_VERSION 0.10.0
+RUN npm install redoc-cli@REDOC_CLI_VERSION -g
 
-RUN yarn install --pure-lockfile && yarn cache clean
+COPY entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
