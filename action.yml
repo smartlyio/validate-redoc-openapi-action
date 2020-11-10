@@ -1,12 +1,12 @@
-name: "validate-redoc-openapi-action"
-description: "An action to make sure that openapi files are working with redoc"
+name: 'validate-redoc-openapi-action'
+description: 'An action to make sure that openapi files are working with redoc'
 inputs:
   openapi-file:
-    description: "Location of the openapi file"
+    description: 'Location of the openapi file'
     required: true
-    default: "openapi/openapi.yml"
+    default: 'openapi/openapi.yml'
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.openapi-file }}
