@@ -1,0 +1,37 @@
+---
+openapi: 3.0.0
+info:
+  title: Test service
+  version: alpha
+  x-displayName: Test Service
+  contact:
+    name: Valtteri Virtanen
+servers:
+  - url: http://localhost:9999
+components:
+  schemas:
+    healthCheckResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+      required:
+        - ok
+      additionalProperties: false
+paths:
+  /health:
+    get:
+      summary: health check
+      responses:
+        '200':
+          description: yes we are
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/healthCheckResponse'
+        '5XX':
+          description: no we are not
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/healthCheckResponse'
