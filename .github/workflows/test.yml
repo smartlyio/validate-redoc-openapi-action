@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test OpenAPI spec validation
+    steps:
+      - name: Validate valid openapi file
+        uses: ./
+        with:
+          openapi-file: 'fixtures/valid_openapi.yml'
