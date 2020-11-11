@@ -9,4 +9,4 @@ jobs:
       - name: Validate valid openapi file
         uses: ./
         with:
-          openapi-file: 'fixtures/invalid_openapi.yml'
+          openapi-file: 'fixtures/valid_openapi.yml'
