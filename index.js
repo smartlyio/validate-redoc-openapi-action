@@ -1,7 +1,6 @@
 const core = require('@actions/core');
 const validate = require('./validate');
 
-// most @actions toolkit packages have async methods
 async function run() {
   const openapiFile = core.getInput('openapi-file');
   core.info(`Validating file ${openapiFile}`);
