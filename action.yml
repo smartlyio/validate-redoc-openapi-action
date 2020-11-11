@@ -6,7 +6,5 @@ inputs:
     required: true
     default: 'openapi/openapi.yml'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.openapi-file }}
+  using: 'node12'
+  main: 'dist/index.js'
