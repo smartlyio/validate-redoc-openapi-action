@@ -8,8 +8,6 @@ This action validates that openapi file can be rendered with redoc
 
 **Required** Location of the openapi file to validate. Default `openapi/openapi.yml`.
 
-The time we greeted you.
-
 ## Example usage
 
 ```yaml
