@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Test OpenAPI spec validation
     steps:
+      - uses: actions/checkout@v2
       - name: Validate valid openapi file
         uses: ./
         with:
-          openapi-file: 'fixtures/valid_openapi.yml'
+          openapi-file: 'fixtures/invalid_openapi.yml'
