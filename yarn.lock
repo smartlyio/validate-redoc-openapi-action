@@ -4032,7 +4032,7 @@ redoc-cli@^0.10.0:
     tslib "^2.0.0"
     yargs "^15.4.1"
 
-redoc@2.0.0-rc.45, redoc@^2.0.0-rc.30:
+redoc@2.0.0-rc.45, redoc@^2.0.0-rc:
   version "2.0.0-rc.45"
   resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0-rc.45.tgz#a42301a032582c9fbe1cb81b10f192d289e9467d"
   integrity sha512-yOgyXFybwBItvY+y9cFEA6X0W6KDdnkdeWK8LMkTxWN4HUecRwPFYPRdzx+SvDUb8ICh4PDtfyDU3Fo1e9N8Iw==
