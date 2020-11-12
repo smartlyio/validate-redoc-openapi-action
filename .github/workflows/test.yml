@@ -11,8 +11,11 @@ jobs:
         with:
           openapi-file: 'fixtures/valid_openapi.yml'
   test_unit:
-    - uses: actions/checkout@v2
-    - name: yarn install
-      run: yarn install
-    - name: yarn test
-      run: yarn test
+    runs-on: ubuntu-latest
+    name: Run unit tests
+    steps:
+      - uses: actions/checkout@v2
+      - name: yarn install
+        run: yarn install
+      - name: yarn test
+        run: yarn test
