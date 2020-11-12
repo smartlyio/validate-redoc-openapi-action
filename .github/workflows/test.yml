@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  test:
+  test_action:
     runs-on: ubuntu-latest
     name: Test OpenAPI spec validation
     steps:
@@ -10,3 +10,9 @@ jobs:
         uses: ./
         with:
           openapi-file: 'fixtures/valid_openapi.yml'
+  test_unit:
+    - uses: actions/checkout@v2
+    - name: yarn install
+      run: yarn install
+    - name: yarn test
+      run: yarn test
