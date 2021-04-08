@@ -588,6 +588,31 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@redocly/ajv@^6.12.3":
+  version "6.12.4"
+  resolved "https://registry.yarnpkg.com/@redocly/ajv/-/ajv-6.12.4.tgz#b131c9c11d1bdaa5564f69bcaefe10a4c9a5aa65"
+  integrity sha512-RB6vWO78v6c+SW/3bZh+XZMr4nGdJKAiPGsBALuUZnLuCiQ7aXCT1AuFHqnfS2gyXbEUEj+kw8p4ux8KdAfs3A==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+"@redocly/openapi-core@^1.0.0-beta.42":
+  version "1.0.0-beta.42"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.42.tgz#e96c519f49246713f527b1acfda6b23708824aba"
+  integrity sha512-DKy/eJNAoN94TmZSVnkn4f4IDasmFUZqSSRRBX6eU//2MSMazY0u3XaFY7Bis28uCxJhwBVcDpT/qMwiX2PI1Q==
+  dependencies:
+    "@redocly/ajv" "^6.12.3"
+    "@types/node" "^14.11.8"
+    colorette "^1.2.0"
+    js-levenshtein "^1.1.6"
+    js-yaml "^3.14.0"
+    lodash.isequal "^4.5.0"
+    minimatch "^3.0.4"
+    node-fetch "^2.6.1"
+    yaml-ast-parser "0.0.43"
+
 "@redocly/react-dropdown-aria@^2.0.11":
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/@redocly/react-dropdown-aria/-/react-dropdown-aria-2.0.11.tgz#532b864b329237e646abe45d0f8edc923e77370a"
@@ -675,6 +700,11 @@
   version "13.13.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.46.tgz#5471e176f3fa15e018dea7992072bf8ca208a3a6"
   integrity sha512-dqpbzK/KDsOlEt+oyB3rv+u1IxlLFziZu/Z0adfRKoelkr+sTd6QcgiQC+HWq/vkYkHwG5ot2LxgV05aAjnhcg==
+
+"@types/node@^14.11.8":
+  version "14.14.37"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
+  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1367,6 +1397,11 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+
+colorette@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"
+  integrity sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==
 
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
@@ -3067,12 +3102,17 @@ jest@26.6.3:
     import-local "^3.0.2"
     jest-cli "^26.6.3"
 
+js-levenshtein@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
+  integrity sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.12.1:
+js-yaml@^3.12.1, js-yaml@^3.14.0:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -3272,6 +3312,11 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -3507,6 +3552,11 @@ node-fetch-h2@^2.3.0:
   integrity sha512-ofRW94Ab0T4AOh5Fk8t0h8OBWrmjb0SSB20xh1H8YnPV9EJ+f5AMoYSUQ2zgJ4Iq2HAK0I2l5/Nequ8YzFS3Hg==
   dependencies:
     http2-client "^1.2.5"
+
+node-fetch@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -4123,10 +4173,10 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-redoc-cli@^0.10.4:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/redoc-cli/-/redoc-cli-0.10.4.tgz#2248d7c8c7a3f592f184d679839755097be3bd47"
-  integrity sha512-2KcHOC0hps8Hi1OJH+BQOQ9ARXv2JAewwsknzakPFnVgWQGtQTvLqbpqdg75KPIXPpleRHnYGFFjOcJQJy43/Q==
+redoc-cli@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/redoc-cli/-/redoc-cli-0.11.1.tgz#88af0c1914b6f611e42b966d712c070daae030f3"
+  integrity sha512-BBAbgtOfId6fI/ncmKyeeN1cnheoVPw2/s6urzPI757hpNifmfsxQjn+qK9dT3NoVOlh/t6BIIDdv2zd0ghCoA==
   dependencies:
     chokidar "^3.4.1"
     handlebars "^4.7.6"
@@ -4136,16 +4186,17 @@ redoc-cli@^0.10.4:
     node-libs-browser "^2.2.1"
     react "^16.13.1"
     react-dom "^16.13.1"
-    redoc "2.0.0-rc.50"
+    redoc "2.0.0-rc.51"
     styled-components "^5.1.1"
     tslib "^2.0.0"
     yargs "^15.4.1"
 
-redoc@2.0.0-rc.50:
-  version "2.0.0-rc.50"
-  resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0-rc.50.tgz#9206bf577327d149cf04c1b8c16f41e08f9cb6c5"
-  integrity sha512-SngLJr1YEDWIfp3YGBax8H8HQQ/gIqmf9YEmWsMACbAevsf7rt2tkTwALdjOf1pD27bVYfbZm1nud0QenoXsng==
+redoc@2.0.0-rc.51:
+  version "2.0.0-rc.51"
+  resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0-rc.51.tgz#39a1c6eed071a062860fac87b48a43119283ab60"
+  integrity sha512-oy8RVrGXioizboAJaOpxnblvqLxfDknmFyjKvwFCpKzoAnrmgm4zXem73Ni/4NLGQg3dn73KzMmRHIiRQbtuqg==
   dependencies:
+    "@redocly/openapi-core" "^1.0.0-beta.42"
     "@redocly/react-dropdown-aria" "^2.0.11"
     "@types/node" "^13.11.1"
     classnames "^2.2.6"
@@ -4153,7 +4204,6 @@ redoc@2.0.0-rc.50:
     dompurify "^2.0.12"
     eventemitter3 "^4.0.4"
     json-pointer "^0.6.0"
-    json-schema-ref-parser "^6.1.0"
     lunr "2.3.8"
     mark.js "^8.11.1"
     marked "^0.7.0"
@@ -5291,6 +5341,11 @@ y18n@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.5.tgz#8769ec08d03b1ea2df2500acef561743bbb9ab18"
   integrity sha512-hsRUr4FFrvhhRH12wOdfs38Gy7k2FFzB9qgN9v3aLykRq0dRcdcpz5C9FxdS2NuhOrI/628b/KSTJ3rwHysYSg==
+
+yaml-ast-parser@0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/yaml-ast-parser/-/yaml-ast-parser-0.0.43.tgz#e8a23e6fb4c38076ab92995c5dca33f3d3d7c9bb"
+  integrity sha512-2PTINUwsRqSd+s8XxKaJWQlUuEMHJQyEuh2edBbW8KNJz0SJPwUSD2zRWqezFEdN7IzAgeuYHFUCF7o8zRdZ0A==
 
 yaml@^1.10.0, yaml@^1.8.3:
   version "1.10.0"
