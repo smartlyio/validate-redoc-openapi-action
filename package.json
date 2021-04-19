@@ -20,7 +20,7 @@
   "author": "Valtteri Virtanen (virtanen.valtteri@smartly.io)",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.5",
+    "@actions/core": "^1.2.6",
     "redoc": "^2.0.0-rc",
     "redoc-cli": "^0.11.0"
   },
