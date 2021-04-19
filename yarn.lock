@@ -598,10 +598,10 @@
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-"@redocly/openapi-core@^1.0.0-beta.42":
-  version "1.0.0-beta.42"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.42.tgz#e96c519f49246713f527b1acfda6b23708824aba"
-  integrity sha512-DKy/eJNAoN94TmZSVnkn4f4IDasmFUZqSSRRBX6eU//2MSMazY0u3XaFY7Bis28uCxJhwBVcDpT/qMwiX2PI1Q==
+"@redocly/openapi-core@^1.0.0-beta.44":
+  version "1.0.0-beta.44"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.44.tgz#e9a6c50ee2bb18e93b3439ed92c53e440de3aa7a"
+  integrity sha512-9HNnh1MzvMsLK1liuidFBqWiAsZ2Yg3RY58fcEsy0QruSMdDbn7SoeI1qnXe6O+BkBS+vAP4oVzZDMHCMKGsOQ==
   dependencies:
     "@redocly/ajv" "^6.12.3"
     "@types/node" "^14.11.8"
@@ -4433,10 +4433,10 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-redoc-cli@^0.11.0:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/redoc-cli/-/redoc-cli-0.11.1.tgz#88af0c1914b6f611e42b966d712c070daae030f3"
-  integrity sha512-BBAbgtOfId6fI/ncmKyeeN1cnheoVPw2/s6urzPI757hpNifmfsxQjn+qK9dT3NoVOlh/t6BIIDdv2zd0ghCoA==
+redoc-cli@^0.11.1:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/redoc-cli/-/redoc-cli-0.11.4.tgz#c4139936cb758d9cad4369b9503f44eb79e62d29"
+  integrity sha512-Ke/Lvy9fwLuZGpeILZfJOyBtwGhgOFLQdptAf0LdGt9l44DfwGVw7ppaqXoJEr1rXyu2eO0UtH2UnG5/CCigVw==
   dependencies:
     chokidar "^3.4.1"
     handlebars "^4.7.6"
@@ -4446,17 +4446,17 @@ redoc-cli@^0.11.0:
     node-libs-browser "^2.2.1"
     react "^16.13.1"
     react-dom "^16.13.1"
-    redoc "2.0.0-rc.51"
+    redoc "2.0.0-rc.53"
     styled-components "^5.1.1"
     tslib "^2.0.0"
     yargs "^15.4.1"
 
-redoc@2.0.0-rc.51:
-  version "2.0.0-rc.51"
-  resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0-rc.51.tgz#39a1c6eed071a062860fac87b48a43119283ab60"
-  integrity sha512-oy8RVrGXioizboAJaOpxnblvqLxfDknmFyjKvwFCpKzoAnrmgm4zXem73Ni/4NLGQg3dn73KzMmRHIiRQbtuqg==
+redoc@2.0.0-rc.53:
+  version "2.0.0-rc.53"
+  resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0-rc.53.tgz#2841b78638894e724eb997a434c4ef31ac853983"
+  integrity sha512-nyHIEIVo+kxsMfAy7nkYSlU7qjXZAARcj0INaRwCoy/DG9BMMi3xLcpo0CmarL9XeI891+VN2tpyTJ8jhZUtPw==
   dependencies:
-    "@redocly/openapi-core" "^1.0.0-beta.42"
+    "@redocly/openapi-core" "^1.0.0-beta.44"
     "@redocly/react-dropdown-aria" "^2.0.11"
     "@types/node" "^13.11.1"
     classnames "^2.2.6"
