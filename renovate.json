@@ -1,4 +1,8 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    "github>smartlyio/renovate-config:github-actions",
+    "github>smartlyio/renovate-config:security-base"
+  ],
   "reviewers": ["waltsu"]
 }
