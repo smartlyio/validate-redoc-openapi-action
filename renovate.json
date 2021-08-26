@@ -1,8 +1,9 @@
 {
   "extends": [
-    "config:base",
-    "github>smartlyio/renovate-config:github-actions",
-    "github>smartlyio/renovate-config:security-base"
+    "config:base"
   ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
   "reviewers": ["waltsu"]
 }
