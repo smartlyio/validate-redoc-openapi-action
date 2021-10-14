@@ -22,7 +22,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "redoc": "^2.0.0-rc",
-    "redoc-cli": "^0.12.0"
+    "redoc-cli": "^0.13.0"
   },
   "devDependencies": {
     "@vercel/ncc": "0.31.1",
