@@ -28,7 +28,7 @@
     "@vercel/ncc": "0.33.0",
     "eslint": "8.4.1",
     "jest": "27.4.3",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "webpack": "5.65.0"
   }
 }
