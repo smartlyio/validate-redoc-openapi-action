@@ -27,7 +27,7 @@
   "devDependencies": {
     "@vercel/ncc": "0.33.1",
     "eslint": "8.4.1",
-    "jest": "27.4.4",
+    "jest": "27.4.5",
     "prettier": "2.5.1",
     "webpack": "5.65.0"
   }
