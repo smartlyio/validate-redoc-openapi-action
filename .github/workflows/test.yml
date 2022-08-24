@@ -6,6 +6,10 @@ jobs:
     name: Test OpenAPI spec validation
     steps:
       - uses: actions/checkout@v3
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
       - name: Validate valid openapi file
         uses: ./
         with:
@@ -15,6 +19,10 @@ jobs:
     name: Run unit tests
     steps:
       - uses: actions/checkout@v3
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
       - name: yarn install
         run: yarn install
       - name: yarn test
