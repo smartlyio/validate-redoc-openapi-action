@@ -4,8 +4,10 @@
   "description": "An action to make sure that openapi files are working with redoc",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
     "dist": "ncc build index.js -o dist --source-map --license licenses.txt",
-    "test": "jest"
+    "test": "jest",
+    "version": "yarn clean && yarn dist && git add -- dist"
   },
   "repository": {
     "type": "git",
