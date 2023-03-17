@@ -23,4 +23,5 @@ jobs:
       - name: Release flow
         uses: smartlyio/github-actions@release-action-node-v1
         with:
+          use_yarn: true
           token: "${{ secrets.GITHUB_TOKEN }}"
