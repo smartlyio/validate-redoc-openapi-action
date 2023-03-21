@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "redoc": "^2.0.0-rc",
+    "redoc": "^2.0.0",
     "redoc-cli": "^0.13.0"
   },
   "devDependencies": {
