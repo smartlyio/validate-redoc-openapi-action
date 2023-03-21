@@ -1,8 +1,10 @@
+const { resolve } = require('path');
 const { loadAndBundleSpec } = require('redoc');
 
 const validate = async function (pathToSpec) {
   try {
-    await loadAndBundleSpec(pathToSpec);
+    const fullPath = resolve(pathToSpec);
+    await loadAndBundleSpec(fullPath);
     return undefined;
   } catch (error) {
     return error.message;
