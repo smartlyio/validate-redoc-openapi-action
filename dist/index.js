@@ -81020,11 +81020,13 @@ module.exports.implForWrapper = function (wrapper) {
 /***/ 5060:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+const { resolve } = __nccwpck_require__(1017);
 const { loadAndBundleSpec } = __nccwpck_require__(504);
 
 const validate = async function (pathToSpec) {
   try {
-    await loadAndBundleSpec(pathToSpec);
+    const fullPath = resolve(pathToSpec);
+    await loadAndBundleSpec(fullPath);
     return undefined;
   } catch (error) {
     return error.message;
