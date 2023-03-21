@@ -7,6 +7,10 @@ test_action:
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
+    - name: yarn install
+      run: yarn install
+    - name: Build distribution
+      run: yarn clean && yarn dist
     - name: Validate valid openapi file
       uses: ./
       with:
