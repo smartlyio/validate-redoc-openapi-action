@@ -87832,7 +87832,7 @@ exports.bgWhiteBright = init(107, 49)
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"i8":"1.0.0-beta.124"}');
+module.exports = JSON.parse('{"i8":"1.0.0-beta.125"}');
 
 /***/ }),
 
