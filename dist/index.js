@@ -3257,13 +3257,27 @@ function bundleDocument(opts) {
                     : remove_unused_components_2.RemoveUnusedComponents({}),
             });
         }
-        const resolvedRefMap = yield resolve_1.resolveDocument({
+        let resolvedRefMap = yield resolve_1.resolveDocument({
             rootDocument: document,
             rootType: types.Root,
             externalRefResolver,
         });
+        if (preprocessors.length > 0) {
+            // Make additional pass to resolve refs defined in preprocessors.
+            walk_1.walkDocument({
+                document,
+                rootType: types.Root,
+                normalizedVisitors: visitors_1.normalizeVisitors(preprocessors, types),
+                resolvedRefMap,
+                ctx,
+            });
+            resolvedRefMap = yield resolve_1.resolveDocument({
+                rootDocument: document,
+                rootType: types.Root,
+                externalRefResolver,
+            });
+        }
         const bundleVisitor = visitors_1.normalizeVisitors([
-            ...preprocessors,
             {
                 severity: 'error',
                 ruleId: 'bundler',
@@ -3989,12 +4003,26 @@ function transformConfig(rawConfig) {
     }
     const { apis, apiDefinitions, referenceDocs, lint } = rawConfig, rest = __rest(rawConfig, ["apis", "apiDefinitions", "referenceDocs", "lint"]);
     const { styleguideConfig, rawConfigRest } = extractFlatConfig(rest);
-    return Object.assign({ theme: {
+    const transformedConfig = Object.assign({ theme: {
             openapi: Object.assign(Object.assign(Object.assign({}, referenceDocs), rawConfig['features.openapi']), (_a = rawConfig.theme) === null || _a === void 0 ? void 0 : _a.openapi),
             mockServer: Object.assign(Object.assign({}, rawConfig['features.mockServer']), (_b = rawConfig.theme) === null || _b === void 0 ? void 0 : _b.mockServer),
         }, apis: transformApis(apis) || transformApiDefinitionsToApis(apiDefinitions), styleguide: styleguideConfig || lint }, rawConfigRest);
+    showDeprecationMessages(transformedConfig);
+    return transformedConfig;
 }
 exports.transformConfig = transformConfig;
+function showDeprecationMessages(config) {
+    var _a, _b;
+    let allRules = Object.assign({}, (_a = config.styleguide) === null || _a === void 0 ? void 0 : _a.rules);
+    for (const api of Object.values(config.apis || {})) {
+        allRules = Object.assign(Object.assign({}, allRules), (_b = api === null || api === void 0 ? void 0 : api.styleguide) === null || _b === void 0 ? void 0 : _b.rules);
+    }
+    for (const ruleKey of Object.keys(allRules)) {
+        if (ruleKey.startsWith('assert/')) {
+            logger_1.logger.warn(`\nThe 'assert/' syntax in ${ruleKey} is deprecated. Update your configuration to use 'rule/' instead. Examples and more information: https://redocly.com/docs/cli/rules/configurable-rules/\n`);
+        }
+    }
+}
 function getResolveConfig(resolve) {
     var _a, _b;
     return {
@@ -7171,16 +7199,15 @@ function walkDocument(opts) {
             }, collectParents(context), context);
         }
         function reportFn(ruleId, severity, opts) {
-            const loc = opts.location
+            const normalizedLocation = opts.location
                 ? Array.isArray(opts.location)
                     ? opts.location
                     : [opts.location]
                 : [Object.assign(Object.assign({}, currentLocation), { reportOnKey: false })];
+            const location = normalizedLocation.map((l) => (Object.assign(Object.assign(Object.assign({}, currentLocation), { reportOnKey: false }), l)));
             const ruleSeverity = opts.forceSeverity || severity;
             if (ruleSeverity !== 'off') {
-                ctx.problems.push(Object.assign(Object.assign({ ruleId: opts.ruleId || ruleId, severity: ruleSeverity }, opts), { suggest: opts.suggest || [], location: loc.map((loc) => {
-                        return Object.assign(Object.assign(Object.assign({}, currentLocation), { reportOnKey: false }), loc);
-                    }) }));
+                ctx.problems.push(Object.assign(Object.assign({ ruleId: opts.ruleId || ruleId, severity: ruleSeverity }, opts), { suggest: opts.suggest || [], location }));
             }
         }
         function getVisitorDataFn(ruleId) {
@@ -87835,7 +87862,7 @@ exports.bgWhiteBright = init(107, 49)
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"i8":"1.0.0-beta.127"}');
+module.exports = JSON.parse('{"i8":"1.0.0-beta.128"}');
 
 /***/ }),
 
