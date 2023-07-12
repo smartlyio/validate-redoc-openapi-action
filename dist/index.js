@@ -3756,6 +3756,7 @@ class Config {
         this.region = rawConfig.region;
         this.organization = rawConfig.organization;
         this.files = rawConfig.files || [];
+        this.telemetry = rawConfig.telemetry;
     }
 }
 exports.Config = Config;
@@ -30482,8 +30483,11 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 
 		if (headers['transfer-encoding'] === 'chunked' && !headers['content-length']) {
 			response.once('close', function (hadError) {
+				// tests for socket presence, as in some situations the
+				// the 'socket' event is not triggered for the request
+				// (happens in deno), avoids `TypeError`
 				// if a data listener is still present we didn't end cleanly
-				const hasDataListener = socket.listenerCount('data') > 0;
+				const hasDataListener = socket && socket.listenerCount('data') > 0;
 
 				if (hasDataListener && !hadError) {
 					const err = new Error('Premature close');
@@ -87862,7 +87866,7 @@ exports.bgWhiteBright = init(107, 49)
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"i8":"1.0.0-beta.128"}');
+module.exports = JSON.parse('{"i8":"1.0.0-beta.130"}');
 
 /***/ }),
 
