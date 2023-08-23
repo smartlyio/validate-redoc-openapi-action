@@ -285,11 +285,11 @@
     "@babel/helper-plugin-utils" "^7.22.5"
 
 "@babel/runtime@^7.17.8":
-  version "7.22.6"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.6.tgz#57d64b9ae3cff1d67eb067ae117dac087f5bd438"
-  integrity sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==
+  version "7.22.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.10.tgz#ae3e9631fd947cb7e3610d3e9d8fef5f76696682"
+  integrity sha512-21t/fkKLMZI4pqP2wlmsQAWnYW1PDyKyyUV4vCi+B25ydmdaYTKXPwCj0BzSUnZf4seIiYvSA3jcZ3gdsMFkLQ==
   dependencies:
-    regenerator-runtime "^0.13.11"
+    regenerator-runtime "^0.14.0"
 
 "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
@@ -385,9 +385,9 @@
   integrity sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==
 
 "@exodus/schemasafe@^1.0.0-rc.2":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@exodus/schemasafe/-/schemasafe-1.0.1.tgz#e4e2d86ae176b7c96fbff033f3b1a8b1cfd390fb"
-  integrity sha512-PQdbF8dGd4LnbwBlcc4ML8RKYdplm+e9sUeWBTr4zgF13/Shiuov9XznvM4T8cb1CfyKK21yTUkuAIIh/DAH/g==
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@exodus/schemasafe/-/schemasafe-1.2.4.tgz#e671579887e9a735ab4352942f7523a551001640"
+  integrity sha512-DNmuVYeOqFmLmJIJvFIX1TKttOZVI9FwDrqDujhyArjqtXUaZuuB+SuDBTQq3Ev368a7ONJiAJ8m9zi0+IBqZQ==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
@@ -692,10 +692,10 @@
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-"@redocly/openapi-core@^1.0.0-beta.104":
-  version "1.0.0-beta.131"
-  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.0-beta.131.tgz#c5a9c106dcb372bdc8bf479094493a155cc9f2ca"
-  integrity sha512-Dri3Oad3NwcyKgtkYz6hyJO+bAD531ppPrPxNo9Xfqza9LkUtJ6Vi2E6OSRGTWb94iTyEkhrJPbJE56/PbaKhQ==
+"@redocly/openapi-core@^1.0.0-beta.104", "@redocly/openapi-core@^1.0.0-rc.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@redocly/openapi-core/-/openapi-core-1.0.2.tgz#773b48a98fe67383499a5af80a62175c451b387c"
+  integrity sha512-53dzhmG2bsi/8rcAAgBKk9ZLMR035VHgN7oSM3+BM4UAIoNBg6lMC/ChHSf9zO+GrX5qtuWVPqHhjjMti3SAlQ==
   dependencies:
     "@redocly/ajv" "^8.11.0"
     "@types/node" "^14.11.8"
@@ -818,9 +818,9 @@
   integrity sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==
 
 "@types/node@^14.11.8":
-  version "14.18.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.53.tgz#42855629b8773535ab868238718745bf56c56219"
-  integrity sha512-soGmOpVBUq+gaBMwom1M+krC/NNbWlosh4AtGA03SyWNDiqSKtwp7OulO1M6+mg8YkHMvJ/y0AkCeO8d1hNb7A==
+  version "14.18.54"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.54.tgz#fc304bd66419030141fa997dc5a9e0e374029ae8"
+  integrity sha512-uq7O52wvo2Lggsx1x21tKZgqkJpvwCseBBPtX/nKQfpVlEsLOb11zZ1CRsWUKvJF0+lzuA9jwvA7Pr2Wt7i3xw==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -2995,9 +2995,9 @@ node-fetch-h2@^2.3.0:
     http2-client "^1.2.5"
 
 node-fetch@^2.6.1:
-  version "2.6.12"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.12.tgz#02eb8e22074018e3d5a83016649d04df0e348fba"
-  integrity sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.13.tgz#a20acbbec73c2e09f9007de5cda17104122e0010"
+  integrity sha512-StxNAxh15zr77QvvkmveSQ8uCQ4+v5FkvNTj0OESmiHu+VRi/gXArXtkWMElOsOUNLtUEvI4yS+rdtOHZTwlQA==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -3129,7 +3129,7 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-openapi-sampler@^1.3.0:
+openapi-sampler@^1.3.0, openapi-sampler@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/openapi-sampler/-/openapi-sampler-1.3.1.tgz#eebb2a1048f830cc277398bc8022b415f887e859"
   integrity sha512-Ert9mvc2tLPmmInwSyGZS+v4Ogu9/YoZuq9oP3EdUklg2cad6+IGndP9yqJJwbgdXwZibiq5fpv6vYujchdJFg==
@@ -3496,7 +3496,7 @@ redoc-cli@^0.13.0:
     styled-components "^5.3.0"
     yargs "^17.3.1"
 
-redoc@2.0.0, redoc@^2.0.0:
+redoc@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.0.0.tgz#8b3047ca75b84d31558c6c92da7f84affef35c3e"
   integrity sha512-rU8iLdAkT89ywOkYk66Mr+IofqaMASlRvTew0dJvopCORMIPUcPMxjlJbJNC6wsn2vvMnpUFLQ/0ISDWn9BWag==
@@ -3524,15 +3524,42 @@ redoc@2.0.0, redoc@^2.0.0:
     swagger2openapi "^7.0.6"
     url-template "^2.0.8"
 
+redoc@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/redoc/-/redoc-2.1.1.tgz#e36934791cfed85af45da8198ff04d87a683e057"
+  integrity sha512-0Gb5VDK1K19LrCv7UfUUjCmmOhpq31G309nbGjbTprbRZOCsQWIpWvesCjlfYi50UILab8lyJUXab4L1wraO1g==
+  dependencies:
+    "@redocly/openapi-core" "^1.0.0-rc.2"
+    classnames "^2.3.1"
+    decko "^1.2.0"
+    dompurify "^2.2.8"
+    eventemitter3 "^4.0.7"
+    json-pointer "^0.6.2"
+    lunr "^2.3.9"
+    mark.js "^8.11.1"
+    marked "^4.0.15"
+    mobx-react "^7.2.0"
+    openapi-sampler "^1.3.1"
+    path-browserify "^1.0.1"
+    perfect-scrollbar "^1.5.5"
+    polished "^4.1.3"
+    prismjs "^1.27.0"
+    prop-types "^15.7.2"
+    react-tabs "^3.2.2"
+    slugify "~1.4.7"
+    stickyfill "^1.1.1"
+    swagger2openapi "^7.0.6"
+    url-template "^2.0.8"
+
 reftools@^1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/reftools/-/reftools-1.1.9.tgz#e16e19f662ccd4648605312c06d34e5da3a2b77e"
   integrity sha512-OVede/NQE13xBQ+ob5CKd5KyeJYU2YInb1bmV4nRoOfquZPkAkxuOXicSe1PvqIuZZ4kD13sPKBbR7UFDmli6w==
 
-regenerator-runtime@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
-  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 require-directory@^2.1.1:
   version "2.1.1"
