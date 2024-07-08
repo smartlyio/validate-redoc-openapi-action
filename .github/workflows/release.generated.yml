@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 16.x
+          cache: yarn
       - name: yarn install
         run: yarn install
       - name: Build distribution
@@ -41,6 +42,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 16.x
+          cache: yarn
       - name: yarn install
         run: yarn install
       - name: yarn test
