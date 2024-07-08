@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn install
+      - run: yarn install --frozen-lockfile --link-duplicates
       - name: Build distribution
         run: yarn clean && yarn dist
       - name: Validate valid openapi file
@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn install
+      - run: yarn install --frozen-lockfile --link-duplicates
       - run: yarn test
 
   release:
