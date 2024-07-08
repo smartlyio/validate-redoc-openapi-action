@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test OpenAPI spec validation
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Run unit tests
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
@@ -51,7 +51,7 @@ jobs:
     name: "Build and release action"
     needs: [test_action, test_unit]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: true
