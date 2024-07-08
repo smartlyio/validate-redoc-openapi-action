@@ -24,8 +24,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - name: yarn install
-        run: yarn install
+      - run: yarn install
       - name: Build distribution
         run: yarn clean && yarn dist
       - name: Validate valid openapi file
@@ -43,10 +42,8 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - name: yarn install
-        run: yarn install
-      - name: yarn test
-        run: yarn test
+      - run: yarn install
+      - run: yarn test
 
   release:
     runs-on: ubuntu-22.04
