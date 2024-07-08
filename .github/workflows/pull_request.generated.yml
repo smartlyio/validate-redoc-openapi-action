@@ -15,7 +15,7 @@ on:
 
 jobs:
   test_action:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Test OpenAPI spec validation
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
           openapi-file: 'fixtures/valid_openapi.yml'
 
   test_unit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Run unit tests
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
         run: yarn test
 
   release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     name: "Build and release action"
     needs: [test_action, test_unit]
     steps:
