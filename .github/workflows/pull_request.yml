@@ -1,20 +1,21 @@
-name: "Pull Request"
+name: Pull Request
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  @import ./jobs/test_action
-
-  @import ./jobs/test_unit
+  build:
+    name: Build
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
 
   release:
-    runs-on: <%= ubuntu_version %>
+    runs-on: ubuntu-22.04
     name: "Build and release action"
-    needs: [test_action, test_unit]
+    needs: [build]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: true

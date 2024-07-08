@@ -1,0 +1,35 @@
+name: Build
+on:
+  workflow_call:
+
+jobs:
+  test_action:
+    runs-on: ubuntu-22.04
+    name: Test OpenAPI spec validation
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.x
+          cache: yarn
+      - run: yarn install --frozen-lockfile --link-duplicates
+      - name: Build distribution
+        run: yarn clean && yarn dist
+      - name: Validate valid openapi file
+        uses: ./
+        with:
+          openapi-file: 'fixtures/valid_openapi.yml'
+
+  test_unit:
+    runs-on: ubuntu-22.04
+    name: Run unit tests
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.x
+          cache: yarn
+      - run: yarn install --frozen-lockfile --link-duplicates
+      - run: yarn test
