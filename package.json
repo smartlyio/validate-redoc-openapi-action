@@ -1,6 +1,6 @@
 {
   "name": "validate-redoc-openapi-action",
-  "version": "1.4.21",
+  "version": "1.4.22",
   "description": "An action to make sure that openapi files are working with redoc",
   "main": "index.js",
   "scripts": {
