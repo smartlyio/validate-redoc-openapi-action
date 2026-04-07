@@ -14,65 +14,27 @@
   },
   "packageRules": [
     {
-      "depTypeList": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "labels": [
-        "no release",
-        "renovate-deps"
-      ],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "labels": ["no release", "renovate-deps"],
       "automerge": true
     },
     {
-      "matchUpdateTypes": [
-        "pin",
-        "pinDigest"
-      ],
-      "minimumReleaseAge": null,
-      "automerge": true
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "major"],
+      "labels": ["patch", "renovate-deps"]
     },
     {
       "groupName": "dependencies",
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "depTypeList": [
-        "dependencies"
-      ],
-      "labels": [
-        "minor",
-        "renovate-deps"
-      ]
+      "matchUpdateTypes": ["patch", "minor"],
+      "matchDepTypes": ["dependencies"],
+      "labels": ["patch", "renovate-deps"]
     },
     {
       "groupName": "dependencies",
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ],
-      "depTypeList": [
-        "dependencies"
-      ],
-      "labels": [
-        "patch",
-        "renovate-deps"
-      ]
-    },
-    {
-      "depTypeList": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "major"
-      ],
-      "labels": [
-        "patch",
-        "renovate-deps"
-      ]
+      "matchUpdateTypes": ["major"],
+      "matchDepTypes": ["dependencies"],
+      "labels": ["minor", "renovate-deps"]
     }
   ],
   "minimumReleaseAge": "30 days"
