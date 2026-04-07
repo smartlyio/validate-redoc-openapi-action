@@ -27,15 +27,23 @@
       "automerge": true
     },
     {
-      "depTypeList": [
-        "devDependencies"
-      ],
       "matchUpdateTypes": [
-        "minor",
+        "pin",
+        "pinDigest"
+      ],
+      "minimumReleaseAge": null,
+      "automerge": true
+    },
+    {
+      "groupName": "dependencies",
+      "matchUpdateTypes": [
         "major"
       ],
+      "depTypeList": [
+        "dependencies"
+      ],
       "labels": [
-        "patch",
+        "minor",
         "renovate-deps"
       ]
     },
@@ -54,15 +62,15 @@
       ]
     },
     {
-      "groupName": "dependencies",
+      "depTypeList": [
+        "devDependencies"
+      ],
       "matchUpdateTypes": [
+        "minor",
         "major"
       ],
-      "depTypeList": [
-        "dependencies"
-      ],
       "labels": [
-        "minor",
+        "patch",
         "renovate-deps"
       ]
     }
