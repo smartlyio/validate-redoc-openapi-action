@@ -3,6 +3,8 @@ engineStrict: true
 minimumReleaseAge: 4320 # 3 days
 minimumReleaseAgeExclude:
   - "@smartly/*"
+  # Renovate security update: redoc@2.4.0
+  - redoc@2.4.0
 
 strictDepBuilds: true
 
