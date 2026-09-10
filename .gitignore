@@ -5,4 +5,7 @@
 node_modules/
 
 # Logs
-yarn-error.log
+pnpm-debug.log*
+
+# pnpm
+.pnpm-store/

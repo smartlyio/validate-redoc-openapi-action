@@ -21,8 +21,9 @@ jobs:
           persist-credentials: true
       - name: Configure git
         uses: smartlyio/github-actions@git-init-userinfo-v1
+      - uses: pnpm/action-setup@v6
       - name: Release flow
         uses: smartlyio/github-actions@release-action-node-v1
         with:
-          use_yarn: true
+          use_yarn: false
           token: "${{ secrets.GITHUB_TOKEN }}"

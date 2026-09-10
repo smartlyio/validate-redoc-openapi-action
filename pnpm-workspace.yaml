@@ -1,0 +1,19 @@
+engineStrict: true
+
+minimumReleaseAge: 4320 # 3 days
+minimumReleaseAgeExclude:
+  - "@smartly/*"
+
+strictDepBuilds: true
+
+allowBuilds:
+  # Thanks/telemetry banner only; not a native compile.
+  core-js: false
+
+blockExoticSubdeps: true
+
+# Avoid silent reinstalls at runtime (Yarn had no equivalent).
+verifyDepsBeforeRun: false
+
+# Non-TTY CI: pnpm 11 otherwise prompts before purging node_modules.
+confirmModulesPurge: false
