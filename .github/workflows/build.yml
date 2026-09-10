@@ -8,13 +8,14 @@ jobs:
     name: Test OpenAPI spec validation
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: yarn
-      - run: yarn install --frozen-lockfile --link-duplicates
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Build distribution
-        run: yarn clean && yarn dist
+        run: pnpm run clean && pnpm run dist
       - name: Validate valid openapi file
         uses: ./
         with:
@@ -25,9 +26,10 @@ jobs:
     name: Run unit tests
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: yarn
-      - run: yarn install --frozen-lockfile --link-duplicates
-      - run: yarn test
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
