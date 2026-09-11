@@ -73,6 +73,15 @@
         "patch",
         "renovate-deps"
       ]
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "labels": [
+        "no release",
+        "renovate-deps"
+      ]
     }
   ],
   "minimumReleaseAge": "30 days"
